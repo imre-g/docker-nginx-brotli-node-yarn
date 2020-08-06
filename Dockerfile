@@ -161,4 +161,7 @@ EXPOSE 80 443
 
 STOPSIGNAL SIGTERM
 
+RUN apk add --update nodejs nodejs-npm
+RUN apk add yarn 
+
 CMD ["nginx", "-g", "daemon off;"]
